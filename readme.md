@@ -1,2 +1,2 @@
 # Indroduction
-    a go + react frame for web
+    a go+react frame for web server
