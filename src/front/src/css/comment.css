@@ -1,0 +1,14 @@
+body{
+    background:white;
+}
+
+.commentBox{
+    color: #363636;
+    font-size: 14px;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 0 10px;
+}

@@ -22,3 +22,8 @@ _testmain.go
 *.exe
 *.test
 *.prof
+.idea
+node_modules
+main
+dist
+.DS_Store
