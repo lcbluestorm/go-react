@@ -27,3 +27,4 @@ node_modules
 main
 dist
 .DS_Store
+pkg

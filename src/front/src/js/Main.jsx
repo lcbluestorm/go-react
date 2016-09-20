@@ -6,27 +6,32 @@ var IndexRoute = require('react-router').IndexRoute;
 var Link = require('react-router').Link;
 var browserHistory = require('react-router').browserHistory;
 
+// material-ui
+var RaisedButton = require('material-ui').RaisedButton;
+var MuiThemeProvider = require('material-ui/styles').MuiThemeProvider;
+var injectTapEventPlugin = require('react-tap-event-plugin');
+
+// self-define componet
 var Header = React.createFactory(require('./Base.jsx')['header']);
 var Footer = React.createFactory(require('./Base.jsx')['footer']);
-
 var CommentBox = React.createFactory(require('./Comment.jsx')[0]);
 var CommentForm = React.createFactory(require('./Comment.jsx')[1]);
+
+injectTapEventPlugin();
 
 var App = React.createClass({
     render: function()  {
       return (
-        <div>
-          {this.props.children}
-        </div>
+        <MuiThemeProvider>
+          <RaisedButton label="Default" />
+        </MuiThemeProvider>
       )
     }
 });
 var About = React.createClass({
     render: function()  {
       return (
-        <div>
-          about
-        </div>
+        <RaisedButton label="Default" />
       )
     }
 });
@@ -42,8 +47,8 @@ ReactDOM.render((
     <Route path="/" component={App}>
       <IndexRoute component={Dashboard} />
       <Route path="about" component={About} />
-      <Route path="form" component={CommentForm} />
     </Route>
+    <Route path="/form" component={CommentForm} />
   </Router>
 ), document.getElementById('content'));
 
